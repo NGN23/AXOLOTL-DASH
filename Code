@@ -1,0 +1,26 @@
+from tkinter import *
+import tkinter as tk
+
+
+win = tk.Tk()
+win.geometry("500x450")
+win.title("Window")
+
+win.iconbitmap("axolot.ico")
+photo=PhotoImage(file='EpicAxolotl.png')
+
+def play():
+    this_b = tk.Label(win, text='You gained ONE new Axolotl!', image=photo, compound='bottom')
+    this_b.pack()
+    this_b.after(250, this_b.destroy)
+
+    
+
+play = Button(win,
+                text="CLICK TO PLAY",
+                command=play)
+play.place(relx=0.5, rely=0.25, anchor=CENTER)
+
+win.configure(bg="black")
+
+I have Axolotl PNG's don't worry. I can't post them here though, soo....
